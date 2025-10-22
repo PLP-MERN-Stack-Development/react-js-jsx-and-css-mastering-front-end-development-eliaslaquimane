@@ -1,70 +1,122 @@
-# React.js and Tailwind CSS Assignment
+# React + Vite — Front-end Mastery (Week 03)
 
-This assignment focuses on building a responsive React application using JSX and Tailwind CSS, implementing component architecture, state management, hooks, and API integration.
+## Objective
+Build a responsive React application using JSX and Tailwind CSS that demonstrates component architecture, state management, hooks usage, and API integration.
 
-## Assignment Overview
+## Quick start
 
-You will:
-1. Set up a React project with Vite and Tailwind CSS
-2. Create reusable UI components
-3. Implement state management using React hooks
-4. Integrate with external APIs
-5. Style your application using Tailwind CSS
+Prerequisites:
 
-## Getting Started
+- Node.js 18+ (or compatible) and npm/yarn/pnpm
 
-1. Accept the GitHub Classroom assignment invitation
-2. Clone your personal repository that was created by GitHub Classroom
-3. Install dependencies:
-   ```
-   npm install
-   ```
-4. Start the development server:
-   ```
-   npm run dev
-   ```
+Install dependencies:
 
-## Files Included
-
-- `Week3-Assignment.md`: Detailed assignment instructions
-- Starter files for your React application:
-  - Basic project structure
-  - Pre-configured Tailwind CSS
-  - Sample component templates
-
-## Requirements
-
-- Node.js (v18 or higher)
-- npm or yarn
-- Modern web browser
-- Code editor (VS Code recommended)
-
-## Project Structure
-
-```
-src/
-├── components/       # Reusable UI components
-├── pages/           # Page components
-├── hooks/           # Custom React hooks
-├── context/         # React context providers
-├── api/             # API integration functions
-├── utils/           # Utility functions
-└── App.jsx          # Main application component
+```bash
+npm install
+# or
+# yarn
+# pnpm install
 ```
 
-## Submission
+Run the development server (Vite):
 
-Your work will be automatically submitted when you push to your GitHub Classroom repository. Make sure to:
+```bash
+npm run dev
+```
 
-1. Complete all required components and features
-2. Implement proper state management with hooks
-3. Integrate with at least one external API
-4. Style your application with Tailwind CSS
-5. Deploy your application and add the URL to your README.md
+Open http://localhost:5173 in your browser (Vite prints the exact URL in the terminal).
 
-## Resources
+Build for production:
 
-- [React Documentation](https://react.dev/)
-- [Tailwind CSS Documentation](https://tailwindcss.com/docs)
-- [Vite Documentation](https://vitejs.dev/guide/)
-- [React Router Documentation](https://reactrouter.com/) 
+```bash
+npm run build
+```
+
+Preview the production build locally:
+
+```bash
+npm run preview
+```
+
+Lint the source files:
+
+```bash
+npm run lint
+```
+
+## What you'll find in this project
+
+Top-level files
+
+- `package.json` — scripts & dependencies
+- `vite.config.js` — Vite configuration
+- `tailwind.config.js` & `postcss.config.*` — Tailwind setup
+- `index.html` — Vite entry HTML
+- `README.md` — this file
+
+Source files (important folders)
+
+- `src/` — application source code
+	- `main.jsx` — app bootstrap and router mount
+	- `App.jsx` — root component
+	- `pages/` — route pages (`Home.jsx`, `Manage.jsx`)
+	- `components/` — reusable UI components (`NavBar.jsx`, `TaskManager.jsx`, `Button.jsx`, `Footer.jsx`)
+	- `api/` — small API helpers or mock data (`api.jsx`)
+	- `hooks/` — custom hooks (e.g. `useLocalStorege.jsx`)
+	- `context/` — React context providers
+	- `assets/` — images, icons
+	- `utils/` — helper functions
+
+This project uses:
+
+- React 19
+- Vite as the dev server / build tool
+- Tailwind CSS for utility-first styling
+- ESLint for linting and code quality
+
+## Project contract (short)
+
+- Inputs: user interactions through UI and simple local state/hooks
+- Outputs: UI updates and localStorage persistence for tasks
+- Error modes: missing localStorage, invalid user input — UI validates where needed
+
+Edge cases covered
+
+- Empty lists (UI displays a helpful placeholder) 
+- Duplicate tasks (UI allows duplicates but can be prevented in logic)
+- localStorage unavailable (app falls back to in-memory state until reload)
+
+## Development tips
+
+- Use the React DevTools for inspecting component tree and hooks.
+- Tailwind classes live in component JSX; use `index.css` and `App.css` for global styles and small overrides.
+- ESLint is configured; run `npm run lint` and fix issues before commits.
+
+## Contributing
+
+This repo is used for learning, but contributions are welcome:
+
+1. Fork the repo and create a new branch for your feature/fix.
+2. Run the app and add/modify code.
+3. Keep changes focused and add comments where helpful.
+
+Open an issue if you want to propose a larger change.
+
+## Potential improvements / next steps
+
+- Add unit tests (Jest + React Testing Library) and simple CI (GitHub Actions).
+- Add type safety with TypeScript and stronger ESLint type-aware rules.
+- Add Storybook for component-driven development.
+
+## License & attribution
+
+This repository is an educational project derived from a Vite + React starter. Check the `package.json` and individual files' headers for licensing. Use freely for learning and teaching.
+
+---
+
+If you want, I can also:
+
+- add a short Getting Started guide tailored to this assignment's exercises in `Week3-Assignment.md`
+- add a simple GitHub Actions workflow to run linting on PRs
+
+Tell me which follow-up you'd like and I'll implement it.

@@ -1,5 +1,5 @@
 import React from 'react';
-import PropTypes from 'prop-types';
+import PropTypes from 'prop-types'; 
 
 /**
  * Button component with different variants
@@ -44,16 +44,16 @@ const Button = ({
   
   // Combine all classes
   const buttonClasses = `${baseClasses} ${variantClasses[variant] || variantClasses.primary} ${sizeClasses[size] || sizeClasses.md} ${disabledClasses} ${className}`;
-  
+
   return (
-    <button
+      <button
       className={buttonClasses}
       disabled={disabled}
-      onClick={onClick}
+        onClick={onClick}
       {...rest}
-    >
+      >
       {children}
-    </button>
+      </button>
   );
 };
 
@@ -66,4 +66,4 @@ Button.propTypes = {
   className: PropTypes.string,
 };
 
-export default Button; 
+export default Button;
